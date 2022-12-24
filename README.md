@@ -1,4 +1,4 @@
-# PetClinicProject
+# Pet Clinic Project
 
 ## Project Breakdown
 https://www.notion.so/insomniacmonkey/Pet-Clinic-Project-cd1e1544c38846eeae84c9f0b223d13d
