@@ -18,11 +18,11 @@ describe('New Owner Form', () => {
     it('should display error messages when form is submitted with invalid input', () => {
       cy.get('button[type="submit"]').click();
       //This is a very flakey way to do it. Ideally we would have data ids. 
-      cy.errorTextCheck('#firstName')
-      cy.errorTextCheck('#lastName')
-      cy.errorTextCheck('#address')
-      cy.errorTextCheck('#city')
-      cy.errorTextCheck('#telephone')
+      cy.errorTextCheck('#firstName','must not be empty')
+      cy.errorTextCheck('#lastName','must not be empty')
+      cy.errorTextCheck('#address','must not be empty')
+      cy.errorTextCheck('#city','must not be empty')
+      cy.errorTextCheck('#telephone','must not be empty')
 
     });
 
