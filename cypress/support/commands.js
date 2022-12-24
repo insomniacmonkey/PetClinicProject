@@ -1,4 +1,3 @@
-//Form Page
 Cypress.Commands.add("enterText", (formInputId, userInput) => {
     cy.get(formInputId)
     .type(userInput)

@@ -14,8 +14,8 @@ describe('New Pet Form', () => {
 
     it('should display error messages when form is submitted with invalid input', () => {
         cy.get('.btn.btn-primary').click();
-        cy.errorTextCheck('#name','is required')
-        cy.errorTextCheck('#birthDate','is required')
+        cy.errorTextCheck('#name','is required');
+        cy.errorTextCheck('#birthDate','is required');
     });
 
     it('should not be able to reuse name', () => {
@@ -23,7 +23,7 @@ describe('New Pet Form', () => {
         cy.get('#birthDate').type('1988-11-01');
         cy.get('#type').select('cat');
         cy.get('.btn.btn-primary').click();
-        cy.errorTextCheck('#name','is already in use')
+        cy.errorTextCheck('#name','is already in use');
         
     });
 
@@ -35,7 +35,7 @@ describe('New Pet Form', () => {
             cy.get('.btn.btn-primary').click();
 
             //Verify the /owner/24 success page. This is a very quick way to make sure the data is there. 
-            cy.url().should('contain','/owners/24')
+            cy.url().should('contain','/owners/24');
             //This will be a problem if there is too many pets/pagination.
             cy.contains(uniqueString);
 
